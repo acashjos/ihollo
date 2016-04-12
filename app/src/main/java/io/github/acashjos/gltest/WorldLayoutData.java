@@ -23,12 +23,12 @@ public final class WorldLayoutData {
 
   public static final float[] FLOATING_CANVAS_COORDS = new float[] {
       // Front face
-      -1.0f, 1.0f, -5.0f,
-      -1.0f, -1.0f, -5.0f,
-      1.0f, 1.0f, -5.0f,
-      -1.0f, -1.0f, -5.0f,
-      1.0f, -1.0f, -5.0f,
-      1.0f, 1.0f, -5.0f
+      -3.0f, 3.0f, -9.0f,
+      -3.0f, -3.0f, -9.0f,
+     3.0f, 3.0f, -9.0f,
+      -3.0f, -3.0f, -9.0f,
+      3.0f, -3.0f, -9.0f,
+      3.0f, 3.0f, -9.0f
   };
 
   public static final float[] FLOATING_CANVAS_COLORS = new float[] {

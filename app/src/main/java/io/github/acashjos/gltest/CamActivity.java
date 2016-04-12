@@ -339,8 +339,8 @@ public class CamActivity extends CardboardActivity implements CardboardView.Ster
         float[] perspective = eye.getPerspective(Z_NEAR, Z_FAR);
        Matrix.multiplyMM(modelView, 0, view, 0, modelCube, 0);
 
-        modelViewProjection=perspective;
-//        Matrix.multiplyMM(modelViewProjection, 0, perspective, 0, modelView, 0);
+//        modelViewProjection=perspective;
+        Matrix.multiplyMM(modelViewProjection, 0, perspective, 0, modelView, 0);
 
 
        /* if(eye.getEyeView()[12]>0)//left
@@ -773,32 +773,5 @@ public class CamActivity extends CardboardActivity implements CardboardView.Ster
     }
 }
 
-
-
-// View
-class MainView extends GLSurfaceView {
-    MainRenderer mRenderer;
-
-    MainView ( Context context ) {
-        super ( context );
-        mRenderer = new MainRenderer(this);
-        setEGLContextClientVersion ( 2 );
-        setRenderer ( mRenderer );
-        setRenderMode ( GLSurfaceView.RENDERMODE_WHEN_DIRTY );
-    }
-
-    public void surfaceCreated ( SurfaceHolder holder ) {
-        super.surfaceCreated ( holder );
-    }
-
-    public void surfaceDestroyed ( SurfaceHolder holder ) {
-        mRenderer.close();
-        super.surfaceDestroyed ( holder );
-    }
-
-    public void surfaceChanged ( SurfaceHolder holder, int format, int w, int h ) {
-        super.surfaceChanged ( holder, format, w, h );
-    }
-}
 
 
